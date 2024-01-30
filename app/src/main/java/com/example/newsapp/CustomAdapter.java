@@ -1,5 +1,6 @@
 package com.example.newsapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,7 +32,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull CustomViewHolder holder, @SuppressLint("RecyclerView") int position) {
         //holder.itemView.setTag(headlines.get(position));
         holder.text_title.setText(headlines.get(position).getTitle());
         holder.text_source.setText(headlines.get(position).getSource().getName());
